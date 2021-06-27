@@ -1,4 +1,6 @@
-const program = require("program"); // The complete solution for node.js command-line interfaces.
+#!/usr/bin/env node
+
+const program = require("commander"); // The complete solution for node.js command-line interfaces.
 const chalk = require("chalk"); // Terminal string styling done right
 const didyoumean = require("didyoumean"); //  A simple JavaScript matching engine
 const semver = require("semver"); // The semantic versioner for npm
@@ -8,15 +10,16 @@ const requireNodeVersion = require("../package.json").engines.node;
 
 function checkNodeVersion(targetVersion, cli) {
   const currentVersion = process.version;
-  if (semver.satisfies(currentVersion, targetVersion)) {
+  if (!semver.satisfies(currentVersion, targetVersion)) {
     console.log(
       chalk.red(`
         You are using Node ${currentVersion}, but this version of ${cli} require Node ${targetVersion}.\n
         Please upgrade your Node version.
       `)
     );
+    // 退出进程
+    process.exit(1);
   }
-  process.exit(1);
 }
 
 function suggestCommands(cmd) {
@@ -55,7 +58,7 @@ program
   .description("create a new project from a template")
   .action((templateName, projectName, cmd) => {
     validateArgsLen(process.argv.length, 5);
-    require("../lib/issues-blog-create")(lowercase(templateName, projectName));
+    require("../lib/issues-blog-create")(lowercase(templateName), projectName);
   });
 
 /** Add a project template */
@@ -73,7 +76,7 @@ program
   .description("list all available project templates")
   .action((cmd) => {
     validateArgsLen(process.argv.length, 3);
-    require("../lib/list-template");
+    require("../lib/list-template")();
   });
 
 /** Delete a project template */

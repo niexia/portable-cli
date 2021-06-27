@@ -40,6 +40,9 @@
     "url": "https://github.com/niexia/issues-blog-cli/issues"
   },
   "homepage": "https://github.com/niexia/issues-blog-cli#readme",
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "dependencies": {
     "chalk": "^4.1.1",
     "commander": "^8.0.0",
@@ -51,7 +54,8 @@
     "ora": "^5.4.1",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.9",
-    "semver": "^7.3.5"
+    "semver": "^7.3.5",
+    "validate-npm-package-name": "^3.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
