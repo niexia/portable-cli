@@ -1,5 +1,5 @@
 {
-  "name": "issues-blog-cli",
+  "name": "portable-cli",
   "version": "1.0.0",
   "description": "一个用于生成通过 issues 功能来写博客的模板的脚手架",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "issues-blog": "bin/index.js"
+    "portable-cli": "bin/index.js"
   },
   "config": {
     "commitizen": {
@@ -27,19 +27,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/niexia/issues-blog-cli.git"
+    "url": "git+https://github.com/niexia/portable-cli.git"
   },
   "keywords": [
     "issues",
     "blog",
+    "admin",
     "cli"
   ],
   "author": "yangjin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/niexia/issues-blog-cli/issues"
+    "url": "https://github.com/niexia/portable-cli/issues"
   },
-  "homepage": "https://github.com/niexia/issues-blog-cli#readme",
+  "homepage": "https://github.com/niexia/portable-cli#readme",
   "engines": {
     "node": ">=8.0.0"
   },

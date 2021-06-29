@@ -57,7 +57,7 @@ function validateArgsLen(argvLen, maxArgvLen) {
 }
 
 /** Check node version */
-checkNodeVersion(requireNodeVersion, "issues-blog/cli");
+checkNodeVersion(requireNodeVersion, "portable-cli");
 
 /** Init project template */
 program
@@ -65,7 +65,7 @@ program
   .description("create a new project from a template")
   .action((templateName, projectName, cmd) => {
     validateArgsLen(process.argv.length, 5);
-    require("../lib/issues-blog-create")(lowercase(templateName), projectName);
+    require("../lib/portable-cli-create")(lowercase(templateName), projectName);
   });
 
 /** Add a project template */

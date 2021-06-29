@@ -8,7 +8,7 @@ const { log } = require("../lib/utils/logger");
 const RELEASE_ACTIONS = ["patch", "minor", "major"];
 
 async function release() {
-  console.log(`Current issues blog cli version is ${currentVersion}`);
+  console.log(`Current portable cli version is ${currentVersion}`);
 
   const versions = {};
   // 生产预发布的版本信息
