@@ -1,6 +1,1 @@
-{
-  "blog": {
-    "github": "https://github.com/niexia/issues-blog-template.git",
-    "download": "direct:https://github.com/niexia/issues-blog-template/archive/refs/heads/main.zip"
-  }
-}
+{"blog":{"github":"https://github.com/niexia/issues-blog-template.git","download":"direct:https://github.com/niexia/issues-blog-template/archive/refs/heads/main.zip"},"admin":{"github":"https://github.com/niexia/vue-element-admin.git","download":"direct:https://github.com/niexia/vue-element-admin/archive/refs/heads/main.zip"}}

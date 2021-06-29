@@ -39,6 +39,13 @@ function lowercase(str) {
   return str.toLocaleLowerCase();
 }
 
+/**
+ * Get the params from `process.argv` and validate
+ * whether the params enters by the user exceed the limit length.
+ *
+ * @param {*} argvLen
+ * @param {*} maxArgvLen
+ */
 function validateArgsLen(argvLen, maxArgvLen) {
   if (argvLen > maxArgvLen) {
     console.log(
