@@ -1,7 +1,7 @@
 {
   "name": "portable-cli",
-  "version": "1.0.2",
-  "description": "一个用于生成通过 issues 功能来写博客的模板的脚手架",
+  "version": "1.0.3",
+  "description": "一个简易的支持自定义模板的脚手架",
   "main": "index.js",
   "scripts": {
     "commit": "git-cz",
